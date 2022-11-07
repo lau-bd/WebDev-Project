@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="../styles/main.css" />
+    <link rel="icon" type="image/png" sizes="32*32" href="./assets/logos/favicon-32x32.png">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="parent_container">
+        <div class='central_container'>
+            <div class="search_bar">
+                <input class='placeholder' type="search" name="q" placeholder="Enter job title..." />
+                <div id='filter_icons'>
+                    <!-- <div class = 'btFilter'> <button class = 'bt'><img src="../desktop/icon-search.svg" alt="loop" class ='loop'></button></div>
+           <div class = 'btFilter'><button class = 'bt'><img src="../mobile/icon-filter.svg" alt="sieve" class ='sieve'></button></div> -->
+                    <input type="image" id='filter_loop' class='filter_buttons' src="../desktop/icon-search.svg"
+                        alt="loop">
+                    <input type="image" id='filter_sieve' class='filter_buttons' src="../mobile/icon-filter.svg"
+                        alt="sieve">
+                </div>
+            </div>
+        </div>
+        <header>
+            <div class="logo">
+                <a href="#">
+                    <img src="../desktop/logo.svg" alt="logo"></a>
+            </div>
+            <div class="mobile_toggle">
+                <img src="../desktop/icon-sun.svg" alt="sun" class="sun_style">
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+                <img src="../desktop/icon-moon.svg" alt="moon" class="moon_style">
+            </div>
+        </header>
+        <div class="background_container">
+        </div>
+    </div>
+</body>
+
+</html>

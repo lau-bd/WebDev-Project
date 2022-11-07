@@ -1,0 +1,323 @@
+@import "colours";
+@import "typography";
+@import "spacing";
+@import "base";
+
+*{
+    font-family: $font;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: pink;
+    //$light_grey;
+}
+
+body {
+height: 2400px;
+width: 100vw;
+}
+
+.p{
+    line-height: $paraspacing;
+    color: $grey;
+}
+
+.h1{
+    font-size: $heading1;
+    line-height: $h1_spacing;
+    color: $white;
+    /*display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;*/
+}
+
+.h2{
+    font-size: $heading2;
+    line-height: $h2_spacing;
+}
+
+.h3{
+    font-size: $heading3;
+    line-height: $h3_spacing;
+    font-weight: bold;
+}
+
+.h4{
+    font-size: $heading4;
+    line-height: $h4_spacing;
+    font-weight: bold;
+    color: $violet;
+}
+
+.parent_container{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 375px;
+    height: 100%; 
+    background-color: $light_grey;
+    border: 2px solid red;
+    position:relative;
+
+.background_container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap; 
+    height: 100%;
+    border: 2px solid greenyellow;
+}
+
+.central_container{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    box-sizing: border-box;
+    position:absolute;
+    width: 90%;
+    height: 100%; 
+    margin: 95px 18px 90px 18px;
+    background-color: $light_grey;
+    border-radius: 8px;
+    z-index: 2;
+    border: 2px solid pink;
+    }
+
+header{
+    // banner
+    background-image: url('../mobile/bg-pattern-header.svg');
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    // display flex
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+    box-sizing: border-box;
+    gap: 30%;
+    width: 375px;
+    height: 138px; ;
+    padding: 10px 20px 50px 20px;
+    // border: 2px solid yellow;
+/*.mobile_banner{
+    border: 10px solid black;
+    background-repeat: no-repeat;   
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+    background-image: url('../mobile/bg-pattern-header.svg');
+    height: 100vh;
+    width: 100%;
+}*/
+}
+}
+
+.mobile_toggle{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+.sun_style{
+    height: 20px;
+    width: 20px;
+.moon_style{
+    height: 12px;
+    width: 12px;
+}
+}
+}
+
+.switch{
+    /* the input box containing the slider */
+    position: relative;
+    display: inline-block;
+    width: 46px;
+    height: 22px;
+    /* hide default checkbox content */
+    input{      
+    visibility: hidden;
+    width: 0;
+    height: 0;}
+}
+
+.slider{
+    /* new box content */
+    border-radius: 20px;
+    background-color: $white;
+    position: absolute;
+    display: inline-block;
+    cursor: pointer;
+    text-indent: -9999px; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+&::before {
+    /* slider sphere */
+        content: '';
+        position: absolute;
+        border-radius: 10px;
+        height: 13px;
+        width: 13px;
+        left: 4px;
+        bottom: 4px;
+        background-color: $violet;
+        -webkit-transition: 0.2s;
+        transition: 0.2s;
+    }
+}
+
+input {
+    &:hover + .slider::before {
+      background-color: #939BF4;
+    }
+  
+    &:checked + .slider::before {
+      left: calc(100% - 4px);
+      transform: translateX(-100%);
+    }
+  }
+  
+    .search_bar{
+    // border: 2px solid red;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    box-sizing: border-box;
+    justify-content: space-around;
+    background-color: $white;
+    height: 78px;
+    width: 100%;
+    border-radius: 8px;
+    }
+
+    .placeholder{
+    // border: 2px solid green;
+    outline: none;
+    font-size: $paragraph;
+    color: $light_grey;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: 20px;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+    width: 60%;
+    border-radius: 4px;
+    border: none;
+}
+
+#filter_icons{
+    // border: 2px solid black;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row-reverse;
+    align-items: center;
+    width: 40%;
+    gap: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    caret-color: transparent;
+ }
+
+ .filter_buttons{
+    box-sizing: border-box;
+    border: solid 2px transparent;
+    border-radius: 5px;
+    padding: 10px;
+    border: 2px solid $light_grey;
+    height: 45px;
+    width: 45px;
+       &:hover {
+        cursor: pointer;
+        box-sizing: border-box;
+        border-radius: 5px;
+        padding: 10px;
+        border: 2px solid $violet;
+      }
+}
+ 
+.no_bullet {
+    list-style-type: none;
+    display: flex;
+    border-radius: 5px;
+    flex-direction: column;
+    background-color:$white;
+    height: 180px;
+    // border: 2px solid $violet;
+  }
+  
+//   .logo{
+//     height: 10px;
+//     width: 10px;
+//   }
+// .loop{
+//     box-sizing: border-box;
+//     border-radius: 5px;
+//     padding: 10px;
+//     border: 2px solid #6570ef;
+// }
+
+// .check{
+//     background-color: $light_grey;
+//     :active{
+//     background-color: $violet;
+//     color: $white;
+//     }
+//     :hover{
+//         background-color: $light_violet;
+//     }
+// }
+
+// .button1{
+//     background-color: $violet;
+//     color: $white;
+//     :hover{
+//         background-color: $light_violet;
+//            }
+// }
+
+// .button2{
+//     background-color: $light_grey;
+//     color: $violet;
+//     :hover{
+//         background-color: $grey;
+//     }
+//     .dark{
+//         background-color: $very_dark_blue;
+    
+//             :hover{
+//                 background-color: $dark_grey;
+//             }
+//         }
+// }
+
+// .form{
+// color: $grey;
+// .filled{
+// color: black;}
+// .dark{
+//     color: $grey;
+//     .filled{
+//         color: $white;
+//     }
+// }
+// }
+
+/*.themeswitch{
+    background-color: $violet;
+    :hover{
+        background-color: $light_violet;
+    }
+}*/
